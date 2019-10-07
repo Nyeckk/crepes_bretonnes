@@ -1,7 +1,10 @@
-<html>
-    <head>test template</head>
-    <body>
-        <h1>Ici la date du jour</h1>
-        <b>Nous sommes le : {{ date }}</b>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+    test de la date
+{% endblock title %}
+{% block content %}
+    <h1>Ici la date du jour</h1>
+    <b>Nous sommes le : {{ date }}</b>
+    {% load static %}
+        <img src='{% static 'crepe.jpg' %}' alt='test crepe'/>
+{% endblock content %}
